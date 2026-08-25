@@ -28,5 +28,4 @@ public class VeiculoController {
     }
 
     //incompleto
-    //está aparecendo "null" mesmo preenchido no banco
 }

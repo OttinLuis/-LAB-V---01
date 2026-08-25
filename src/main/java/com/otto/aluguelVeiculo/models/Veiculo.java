@@ -12,8 +12,8 @@ public class Veiculo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "modeloCarro", nullable = false)
-    private String modeloCarro;
+    @Column(name = "modelo_carro", nullable = false)
+    private String modelo_carro;
 
     @Column(name = "placa", nullable = false,
     unique = true)
@@ -23,9 +23,9 @@ public class Veiculo {
 
     }
 
-    public Veiculo(Long id, String modeloCarro, String placa) {
+    public Veiculo(Long id, String modelo_carro, String placa) {
         this.id = id;
-        this.modeloCarro = modeloCarro;
+        this.modelo_carro = modelo_carro;
         this.placa = placa;
     }
 
@@ -37,12 +37,12 @@ public class Veiculo {
         this.id = id;
     }
 
-    public String getModeloCarro() {
-        return modeloCarro;
+    public String getModelo_carro() {
+        return modelo_carro;
     }
 
-    public void setModeloCarro(String modeloCarro) {
-        this.modeloCarro = modeloCarro;
+    public void setModelo_carro(String modelo_carro) {
+        this.modelo_carro = modelo_carro;
     }
 
     public String getPlaca() {

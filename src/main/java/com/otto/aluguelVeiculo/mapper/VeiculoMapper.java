@@ -8,8 +8,8 @@ public class VeiculoMapper {
     public static VeiculoDTO toDto(Veiculo veiculo){
         VeiculoDTO dto = new VeiculoDTO();
 
-        dto.setId(dto.getId());
-        dto.setModeloCarro(dto.getModeloCarro());
+        dto.setId(veiculo.getId());
+        dto.setModelo_carro(veiculo.getModelo_carro());
         return dto;
 
     }

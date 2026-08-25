@@ -3,13 +3,13 @@ package com.otto.aluguelVeiculo.dto;
 public class VeiculoDTO {
 
     private Long id;
-    private String modeloCarro;
+    private String modelo_carro;
 
     public VeiculoDTO(){}
 
-    public VeiculoDTO(Long id, String modeloCarro) {
+    public VeiculoDTO(Long id, String modelo_carro) {
         this.id = id;
-        this.modeloCarro = modeloCarro;
+        this.modelo_carro = modelo_carro;
     }
 
     public Long getId() {
@@ -20,12 +20,11 @@ public class VeiculoDTO {
         this.id = id;
     }
 
-    public String getModeloCarro() {
-        return modeloCarro;
+    public String getModelo_carro() {
+        return modelo_carro;
     }
 
-    public void setModeloCarro(String modeloCarro) {
-        this.modeloCarro = modeloCarro;
+    public void setModelo_carro(String modelo_carro) {
+        this.modelo_carro = modelo_carro;
     }
-
 }

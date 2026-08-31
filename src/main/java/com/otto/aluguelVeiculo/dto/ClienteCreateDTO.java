@@ -1,5 +1,6 @@
 package com.otto.aluguelVeiculo.dto;
 
+
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
@@ -9,6 +10,7 @@ public class ClienteCreateDTO {
 
     @NotBlank(message = "O nome é obrigatório")
     private String nome;
+
 
     @NotBlank(message = "O email é obrigatório")
     @Email(message = "Email inválido")

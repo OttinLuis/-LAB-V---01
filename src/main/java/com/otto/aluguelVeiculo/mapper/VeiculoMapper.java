@@ -14,5 +14,12 @@ public class VeiculoMapper {
 
     }
 
-    //incompleto
+    public static Veiculo toEntity(VeiculoDTO veiculoDTO){
+        Veiculo veiculo = new Veiculo();
+
+        veiculo.setId(veiculo.getId());
+        veiculo.setModelo_carro(veiculo.getModelo_carro());
+
+        return veiculo;
+    }
 }

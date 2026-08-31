@@ -39,7 +39,7 @@ public class ClienteController {
     }
 
     @PutMapping("/{id}")
-    public ClienteDTO put(
+    public ClienteDTO atualizar(
             @PathVariable Long id,
             @RequestBody ClienteCreateDTO dto) {
 

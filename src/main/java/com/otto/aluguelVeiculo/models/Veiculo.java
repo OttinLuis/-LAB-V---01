@@ -23,6 +23,10 @@ public class Veiculo {
 
     }
 
+    @OneToOne
+    @JoinColumn(name = "aluguelVeiculo")
+    private AluguelVeiculo aluguelVeiculo;
+
     public Veiculo(Long id, String modelo_carro, String placa) {
         this.id = id;
         this.modelo_carro = modelo_carro;
@@ -52,6 +56,8 @@ public class Veiculo {
     public void setPlaca(String placa) {
         this.placa = placa;
     }
+
+
 
     @Override
     public boolean equals(Object o) {

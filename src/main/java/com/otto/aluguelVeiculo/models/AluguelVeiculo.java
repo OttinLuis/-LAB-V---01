@@ -3,6 +3,8 @@ package com.otto.aluguelVeiculo.models;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -34,6 +36,12 @@ public class AluguelVeiculo {
     @JoinColumn(name = "cliente")
     private Cliente cliente;
 
+    @OneToMany(mappedBy = "aluguelVeiculo")
+    private List<Fatura> faturas = new ArrayList<>();
+
+    @OneToOne
+    @JoinColumn(name = "veiculo", unique = true)
+    private Veiculo veiculo;
 
     public Long getId() {
         return id;
@@ -57,6 +65,22 @@ public class AluguelVeiculo {
 
     public void setFim(LocalDateTime fim) {
         this.fim = fim;
+    }
+
+    public List<Fatura> getFaturas() {
+        return faturas;
+    }
+
+    public void setFaturas(List<Fatura> faturas) {
+        this.faturas = faturas;
+    }
+
+    public Veiculo getVeiculo() {
+        return veiculo;
+    }
+
+    public void setVeiculo(Veiculo veiculo) {
+        this.veiculo = veiculo;
     }
 
     @Override
